@@ -1,74 +1,88 @@
-# 基于Unity的赛车模拟游戏项目说明
+# Unity-Based Racing Simulation Game
 
-**完成时间**：2024年12月6日  
-
----
-## 项目概述
-本项目旨在通过Unity引擎开发一款具有AI对手的赛车模拟游戏，结合计算机图形学与虚拟现实技术，实现以下核心功能：  
-1. **场景建模**：使用Maya构建多样化赛道和环境模型  
-2. **物理交互**：集成车轮碰撞检测、物理材质与悬挂系统  
-3. **AI寻路**：基于三次贝塞尔曲线的动态路径规划  
-4. **多视角操控**：支持第三人称、右侧视角及空中视角切换  
+## 🎮 Project Overview
+- **Project Title**: Unity-Based Racing Simulation Game  
+- **Role**: Project Manager & Core Developer (independently completed all control and AI modules)  
+- **Development Tools**: Unity, C#, Maya, Visual Studio  
+- **Keywords**: AI Path Planning, Physics Engine, Game Script Optimization  
+- **Completion Date**: December 2024  
+> This project was primarily developed by myself: except for 3D modeling, all racing scripts, AI logic, and debugging were independently implemented.
 
 ---
 
-## 技术实现
+## Summary
+This project aims to develop a racing simulation game with AI opponents using the Unity engine, integrating computer graphics and virtual reality techniques.  
+The main objectives include:  
+1. **Scene Modeling**: Build diverse racetracks and environmental models with Maya  
+2. **Physical Interaction**: Implement wheel collision detection, physical materials, and suspension systems  
+3. **AI Pathfinding**: Apply cubic Bézier curves for dynamic route generation  
+4. **Multiple Perspectives**: Support third-person, side, and aerial view switching  
 
-### 核心模块
-#### 1. 场景搭建
-- **赛道建模**：Maya多边形平面细分 → 曲线雕刻 → 收缩包裹 → 顶点优化  
-- **场景整合**：Unity中导入模型 → 添加碰撞器 → 材质渲染  
+---
 
-#### 2. 赛车控制
-- **物理引擎**：WheelCollider实现车轮摩擦力、悬挂系统  
-- **操控脚本**：InputManager统一输入管理，CarMoveControl处理转向/加速/刹车  
+## Technical Implementation
+
+### Core Modules
+#### 1. Scene Construction
+- **Track Modeling**: Maya polygon subdivision → curve sculpting → shrink wrap → vertex optimization  
+- **Scene Integration**: Import models into Unity → add colliders → apply materials and lighting  
+
+#### 2. Vehicle Control
+- **Physics Engine**: Utilize `WheelCollider` to simulate wheel friction and suspension  
+- **Control Scripts**: Use `InputManager` for unified input handling; `CarMoveControl` manages steering, acceleration, and braking.  
   ```csharp
-  // 转向逻辑示例（部分代码）
+  // Steering logic example (partial code)
   float steerAngle = Mathf.Rad2Deg * Mathf.Atan(2.5f / radius);
   wheels[0].steerAngle = steerAngle;
+- **Camera Follow System**: Achieved smooth transitions via `LateUpdate()`
+    
 
+#### 3. AI Pathfinding
 
-- ​**​摄像机跟随​**​：LateUpdate实现平滑视角切换  
-
-
-#### 3. AI寻路
-
-- ​**​路径规划​**​：三次贝塞尔曲线动态生成行驶轨迹  
+- **Path Generation**: Dynamically generate routes using cubic Bézier curves  
     ![image](https://github.com/user-attachments/assets/bc02a08f-0550-4c2e-ac7a-be99382c1163)
-
-- ​**​追踪逻辑​**​：Tracker对象预计算路径点 → AI赛车动态追踪  
+    
+- **Tracking Logic**: A `Tracker` object precomputes path points for the AI vehicle to follow in real time
     
 
 ---
 
-## 开发挑战与解决方案
+## Development Challenges & Solutions
 
-### 1. 模型优化问题
+### 1. Model Optimization
 
-- ​**​问题​**​：Maya导出的赛道模型存在缝隙
-- ​**​解决​**​：
-    - 手动合并顶点
-    - 多次执行"平均化顶点" + "收缩包裹"操作  
+- **Issue**: Gaps appeared in the racetrack model exported from Maya
+    
+- **Solution**:
+    
+    - Manually merged vertices
+        
+    - Repeated “Average Vertex” and “Shrink Wrap” operations for correction
         
 
-### 2. 物理抖动问题
+### 2. Physics Jitter
 
-- ​**​问题​**​：车辆行驶时出现不规则抖动
-- ​**​解决​**​：
-    - 将物理运算迁移到FixedUpdate
-    - 相机跟随逻辑移至LateUpdate  
+- **Issue**: Vehicle instability during high-speed movement
+    
+- **Solution**:
+    
+    - Moved physics calculations to `FixedUpdate()`
+        
+    - Moved camera tracking logic to `LateUpdate()` to decouple from physics updates
+        
 
 ---
 
-## 成果展示
 ![Racing Car Demo](https://github.com/user-attachments/assets/4b35ca07-8256-424c-91c6-8615f222be0b)
 
 ---
 
-## 结语
+## Project Reflection
 
-本项目通过Unity实现了赛车模拟的核心功能，积累了以下经验：
+This project successfully implemented core functions of a racing simulation game in Unity, providing valuable insights in the following areas:
 
-1. ​**​技术层面​**​：深入理解物理引擎参数调试、贝塞尔曲线在游戏中的应用
-2. ​**​协作层面​**​：模块化分工与版本控制的重要性
-3. ​**​优化层面​**​：性能平衡（如降低AI计算频率以维持帧率）
+1. **Technical Aspects**: Gained in-depth understanding of physics engine tuning and Bézier curve applications in gameplay.
+    
+2. **Collaboration**: Highlighted the importance of modular design and version control.
+    
+3. **Optimization**: Balanced system performance by lowering AI update frequency to maintain stable frame rates.
