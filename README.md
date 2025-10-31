@@ -39,10 +39,17 @@ The main objectives include:
 
 #### 3. AI Pathfinding
 
-- **Path Generation**: Dynamically generate routes using cubic Bézier curves  
-    ![image](https://github.com/user-attachments/assets/bc02a08f-0550-4c2e-ac7a-be99382c1163)
-    
-- **Tracking Logic**: A `Tracker` object precomputes path points for the AI vehicle to follow in real time
+- **Path Generation**: Dynamically generated driving routes using cubic Bézier curves.
+![image](https://github.com/user-attachments/assets/bc02a08f-0550-4c2e-ac7a-be99382c1163)
+
+- **Tracking Logic**: Implemented a Tracker system that precomputes path points and enables the AI vehicle to follow the route in real time.
+
+Demo Note: The AI pathfinding module was successfully developed and tested in a demo version.
+However, due to collider conflicts between imported teammate models, the vehicle experienced slight vibration during simulation.
+To ensure runtime stability, this module was not integrated into the final release (car.exe).
+(See demo video: AI+BezierCurve.mp4
+)
+
     
 
 ---
