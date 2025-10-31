@@ -93,3 +93,10 @@ This project successfully implemented core functions of a racing simulation game
 2. **Collaboration**: Highlighted the importance of modular design and version control.
     
 3. **Optimization**: Balanced system performance by lowering AI update frequency to maintain stable frame rates.
+---
+
+## 🛠️ Build & Run Note
+The demo is developed and built in **Unity 2022.3**.  
+You can open the project in Unity and run it directly from the editor.  
+Alternatively, a compiled version (`car.exe`) is available in the Release section for quick preview.
+
