@@ -1,25 +1,16 @@
 # Unity-Based Racing Simulation Game
 
 ## 🎮 Project Overview
-- **Project Title**: Unity-Based Racing Simulation Game  
-- **Role**: Project Manager & Core Developer (independently completed all control and AI modules)  
-- **Development Tools**: Unity, C#, Maya, Visual Studio  
-- **Keywords**: AI Path Planning, Physics Engine, Game Script Optimization  
-- **Completion Date**: December 2024  
-> This project was primarily developed by myself: except for 3D modeling, all racing scripts, AI logic, and debugging were independently implemented.
+This project is a **Unity-based Racing Simulation Game** featuring AI-controlled vehicles and dynamic physics.  
+I served as **Project Manager and Core Developer**, independently implementing all control scripts, AI logic, and debugging tasks (3D modeling by teammates).  
+
+The system integrates computer graphics, physics simulation, and AI pathfinding techniques, aiming to:  
+1. **Design realistic tracks and scenes** using Unity and Maya  
+2. **Simulate vehicle physics** including wheel colliders and suspension systems  
+3. **Implement AI Pathfinding** with cubic Bézier curves for route generation  
+4. **Support multiple camera perspectives** — third-person, side, and aerial views
 
 ---
-
-## Summary
-This project aims to develop a racing simulation game with AI opponents using the Unity engine, integrating computer graphics and virtual reality techniques.  
-The main objectives include:  
-1. **Scene Modeling**: Build diverse racetracks and environmental models with Maya  
-2. **Physical Interaction**: Implement wheel collision detection, physical materials, and suspension systems  
-3. **AI Pathfinding**: Apply cubic Bézier curves for dynamic route generation  
-4. **Multiple Perspectives**: Support third-person, side, and aerial view switching  
-
----
-
 ## Technical Implementation
 
 ### Core Modules
@@ -78,7 +69,7 @@ To ensure runtime stability, this module was not integrated into the final relea
     - Moved camera tracking logic to `LateUpdate()` to decouple from physics updates
         
 
----
+
 
 ![Racing Car Demo](https://github.com/user-attachments/assets/4b35ca07-8256-424c-91c6-8615f222be0b)
 
