@@ -38,7 +38,7 @@ The system integrates computer graphics, physics simulation, and AI pathfinding 
 Demo Note: The AI pathfinding module was successfully developed and tested in a demo version.
 However, due to collider conflicts between imported teammate models, the vehicle experienced slight vibration during simulation.
 To ensure runtime stability, this module was not integrated into the final release (car.exe).
-(See demo video: AI+BezierCurve.mp4
+(See demo video: [AI+BezierCurve.mp4](./demo/AI+BezierCurve.mp4)
 )
 
     
