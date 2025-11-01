@@ -83,7 +83,7 @@ This project successfully implemented core functions of a racing simulation game
     
 2. **Collaboration**: Highlighted the importance of modular design and version control.
     
-3. **Optimization**: Balanced system performance by lowering AI update frequency to maintain stable frame rates.
+3. **Optimization**: In order to balance system performance, although AI path-finding system had successfully tested in my local environment, our team still chose not to install it into final build, since the uncontrollable shaking remained, and we made a vedio demo instead.
 ---
 
 ## 🛠️ Build & Run Note
